@@ -1,0 +1,14 @@
+---
+description: Pardesiya architecture and aesthetic
+alwaysApply: true
+---
+
+# Pardesiya
+
+Split deployable apps: `frontend/` (Vite React) and `backend/` (Express). Public pages consume `/api`; never ship secrets in the browser.
+
+Keep the Indian kraft-paper look: terracotta, maroon, gold, peacock teal, cardboard grain. Do not restyle into a generic SaaS dashboard.
+
+Site content is CMS-owned JSON on the backend (`backend/data/content.json`). Prefer editing via `/admin` or the API, not hardcoding copy in React.
+
+When adding auth, rate limits, databases, or CDNs, put them in the backend. Forum is a separate route (`/forum`); the home page stays a long scroll (hero, map, gallery, products, sponsors, brand, vision, contacts).
